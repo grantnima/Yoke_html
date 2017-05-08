@@ -18,6 +18,7 @@
 	           	document.getElementById("use-cart-all1").checked=false;
 	           	document.getElementById("use-cart-all2").checked=false;
 	           })
+               $('.cartsj').attr("disabled", "disabled");
             }
 		</script>
 	</head>
@@ -768,7 +769,7 @@
 			  			<input type="checkbox"  value="option1" class="checkboxcart" name="use-cart"><img src="img/fushi.JPG" width="100px"></div>
                    		<div class="col-md-2 col-sm-2  margintop20">慕小爱绿色新鲜水果黄瓜农家自种</div>                   		
                    		<div class="col-md-2 col-sm-2   textbold margintop20">颜色: RB/9953/兰色<br>尺码: 42</div>
-                   		<div class="col-md-2 col-sm-3  textcenter textbold " style="height: 100%;padding-top:20px;border-top:none;border-bottom:none;"><button class="cartbtn" id="carbtnj" onclick="cartsjian()" >-</button><input type="text" style="width: 30px;text-align: center;" value="1" id="carttext"><button  class="cartbtn"id="carbtna" onclick="cartsjia()" >+</button><br><h1 style="font-size: 18px;color: red;margin-top:20px ;">¥98</h1></div>
+                   		<div class="col-md-2 col-sm-3  textcenter textbold " style="height: 100%;padding-top:20px;border-top:none;border-bottom:none;"><button class="cartbtn cartsj" id="carbtnj" onclick="cartsjian(9)" >-</button><input type="text" style="width: 30px;text-align: center;" value="1" id="carttext" onchange="cartextchange('carttext',9)" onfocusout="usetextchange()" ><button  class="cartbtn cartsjia"id="carbtna" onclick="cartsjia(9)" >+</button><br><h1 style="font-size: 18px;color: red;margin-top:20px ;">¥98</h1></div>
 			  	        <div class="col-md-3 col-sm-2  text-center " style="line-height:2em;height: 100%;border-right:none;padding-top:20px;border-top:none;border-bottom:none" >
 			  	         <a href="#">删除</a><br><a href="#">移入收藏夹</a>
 			  	        </div>	
@@ -1113,7 +1114,7 @@
 					<div class=" col-md-1 col-sm-1"><input type="checkbox"  value="option1" name="use-cart" class="checkboxcart"></div>
 					<div class="col-md-3 col-sm-3"><img src="img/fushi.JPG" width="100%" ></div>
 					<div class="col-md-3 col-sm-3 pannel-body-css1">春季新款男士低帮休闲鞋<br>颜色:<span class="spancss textbold" >大红</span><br>尺码:<span class="spancss textbold" >42</span></div>
-					<div class=" col-md-3 col-sm-3" style="color: red;"><button class="cartbtn" id="carbtnj1" onclick="cartsjian()" >-</button><input type="text" style="width: 30px;text-align: center;" value="1" id="carttext1"><button  class="cartbtn"id="carbtna1" onclick="cartsjia()" >+</button></div>
+					<div class=" col-md-3 col-sm-3" style="color: red;"><button class="cartbtn cartsj" id="carbtnj1 " onclick="cartsjian(9)" >-</button><input type="text" style="width: 30px;text-align: center;" value="1" id="carttext1" onchange="cartextchange('carttext1',9)"><button  class="cartbtn cartsjia"id="carbtna1" onclick="cartsjia(9)" >+</button></div>
 					<div class=" col-md-2 col-sm-2 textbold" style="color: red;font-size: 18px;">¥98</div>
 					</div>
 					<div class="row" style="margin-top:20px">
