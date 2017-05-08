@@ -13,9 +13,7 @@
 			window.onload = function() {
 	           $('.checkboxcart').change(function(){
 	           	document.getElementById("use-cart-all3").checked=false;
-	           	
 	           })
-	          $('.cartsj').attr("disabled", "disabled");
             }
 		</script>
 	</head>
@@ -27,9 +25,13 @@
 				<div class="navbar-header">
                     <img src="img/LOGO.png" style="position: fixed;left: -1%;top:10px" />                    
 				</div>
-				<div style="float:right;margin-right:30px;margin-top: 5px;" class="">
-			    <button href="#" class="button button-circle button-raised button-primary"  data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user" style="color: white;"></span></button>
-				<button href="#" class="button button-circle button-raised button-primary"  data-toggle="modal" data-target="#myModa2"><span class="glyphicon glyphicon-pencil" style="color: white;"></span></button>                                
+				<div style="float:right;margin-right:30px;margin-top: 5px;" class="hidden-xs">
+			    <button href="#" class="button  button-glow button-border button-rounded button-primary" style="" data-toggle="modal" data-target="#myModal">登录</button>
+				<button href="#" class="button button-glow button-border button-rounded button-primary" style="" data-toggle="modal" data-target="#myModa2">注册</button>                                
+			</div>
+			<div style="float:right;margin-top: 5px;" class="visible-xs">
+			    <button href="#" class="btn  button-glow button-border button-rounded button-primary" style="" data-toggle="modal" data-target="#myModal">登录</button>
+				<button href="#" class="btn button-glow button-border button-rounded button-primary" style="" data-toggle="modal" data-target="#myModa2">注册</button>                                
 			</div>
 			</div>
 		</nav>
@@ -359,16 +361,16 @@
 								<div class="col-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon "><span class="glyphicon glyphicon-phone"></span></span>
-										<input type="text" class="form-control has-success" name="phonelogintext" placeholder="手机号" id="phonelogintext" onfocusout="phonetext1('phonelogintext','phoneloginp')">
+										<input type="text" class="form-control has-success" name="phonelogintext" placeholder="手机号" id="phonelogintext" onclick="phonetext1()">
 									</div>
-									<p class="bg-danger" id="phoneloginp" style="font-size: 15px;color: red;"></p>
+									<p class="bg-danger" id="phoneloginp"></p>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
 								<div class="col-sm-10">
-									<input type="password" class="form-control passwordtext" name="passlogintext" id="passlogintext" placeholder="Password"  onfocusout="passwordtext1('passlogintext','passloginp')">
-									<p class="bg-danger" id="passloginp" style="font-size: 15px;color: red;"></p>
+									<input type="password" class="form-control passwordtext" name="passlogintext" id="passlogintext" placeholder="Password"  onclick="passtext1()">
+									<p class="bg-danger" id="passloginp"></p>
 								</div>
 							</div>
 					</div>
@@ -394,23 +396,23 @@
 								<div class="col-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon "><span class="glyphicon glyphicon-phone"></span></span>
-										<input type="text" class="form-control has-success" name="phonetext" placeholder="手机号" id="phonetext" onfocusout="phonetext1('phonetext','phonep')">
+										<input type="text" class="form-control has-success" name="phonetext" placeholder="手机号" id="phonetext" onclick="phonetext1()">
 									</div>
-									<p class="bg-danger" id="phonep" style="font-size: 15px;color: red;"></p>
+									<p class="bg-danger" id="phonep"></p>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
 								<div class="col-sm-10">
-									<input type="password" class="form-control passwordtext" name="passtext" id="passtext" placeholder="Password" id="passtext" onfocusout="passwordtext1('passtext','passp')">
-									<p class="bg-danger" id="passp" style="font-size: 15px;color: red;"></p>
+									<input type="password" class="form-control passwordtext" name="passtext" id="passtext" placeholder="Password" id="passtext" onclick="passtext1()">
+									<p class="bg-danger" id="passp"></p>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-2 control-label">确认密码:</label>
 								<div class="col-sm-10">
-									<input type="password" class="form-control passwordtext" name="wordtext" id="wordtext" placeholder="Password" id="wordtext" onfocusout="passwordtext1('wordtext','wordp')">
-									<p class="bg-danger" id="wordp" style="font-size: 15px;color: red;"></p>
+									<input type="password" class="form-control passwordtext" name="wordtext" id="wordtext" placeholder="Password" id="wordtext" onclick="wordtext1()">
+									<p class="bg-danger" id="wordp"></p>
 								</div>
 							</div>
 
@@ -419,7 +421,7 @@
 								<div class="col-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon "><span class="glyphicon glyphicon-envelope"></span></span>
-										<input type="text" class="form-control" placeholder="邮箱" name="emailtext" id="emailtext" onfocusout="emailtext1()">
+										<input type="text" class="form-control" placeholder="邮箱" name="emailtext" id="emailtext" onclick="emailtext1()">
 										<div id="dropdown" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 											<ul>
 												<li class="on">请选择邮箱类型</li>
@@ -429,7 +431,7 @@
 											</ul>
 										</div>
 									</div>
-									<p class="bg-danger" id="emailp" style="font-size: 15px;color: red;"></p>
+									<p class="bg-danger" id="emailp"></p>
 								</div>
 							</div>
 					</div>
@@ -455,7 +457,7 @@
 					<div class=" col-md-1 col-sm-1"><input type="checkbox" name="use-cart" value="option1" class="checkboxcart"></div>
 					<div class="col-md-3 col-sm-3"><img src="img/fushi.JPG" width="100%" ></div>
 					<div class="col-md-3 col-sm-3 pannel-body-css1">春季新款男士低帮休闲鞋<br>颜色:<span class="spancss textbold" >大红</span><br>尺码:<span class="spancss textbold" >42</span></div>
-					<div class=" col-md-3 col-sm-3" style="color: red;"><button class="cartbtn cartsj" id="carbtnj " onclick="cartsjian(9)" >-</button><input type="text" style="width: 30px;text-align: center;" value="1" id="carttext" onchange="cartextchange('carttext',9)" onfocusout="usetextchange()"><button  class="cartbtn cartsjia"id="carbtna" onclick="cartsjia(9)" >+</button></div>
+					<div class=" col-md-3 col-sm-3" style="color: red;"><button class="cartbtn" id="carbtnj" onclick="cartsjian()" >-</button><input type="text" style="width: 30px;text-align: center;" value="1" id="carttext"><button  class="cartbtn"id="carbtna" onclick="cartsjia()" >+</button></div>
 					<div class=" col-md-2 col-sm-2 textbold" style="color: red;font-size: 18px;">¥98</div>
 					</div>
 					<div class="row" style="margin-top:20px">
